@@ -9,7 +9,7 @@
  */
 
 var config = {
-	address: "localhost", // Address to listen on, can be:
+	address: "0.0.0.0", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 	                      // - another specific IPv4/6 to listen on a specific interface
 	                      // - "", "0.0.0.0", "::" to listen on any interface
@@ -38,17 +38,15 @@ var config = {
 			position: "top_left"
 		},
 		{
-			module: "calendar",
-			header: "US Holidays",
+	                module: 'MMM-CoinMarketCap',
 			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				]
-			}
+	                header: "Cryptocurrencies",
+		        config: {
+                        	apiKey: '[Edit Here]', // ID from https://pro.coinmarketcap.com/account/
+				currencies: ['bitcoin', 'ethereum','Eos'],
+				view: 'graphWithChanges',
+			        conversion: 'USD',
+	                 }
 		},
 		{
 			module: "compliments",
@@ -58,9 +56,9 @@ var config = {
 			module: "currentweather",
 			position: "top_right",
 			config: {
-				location: "New York",
-				locationID: "",  //ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "[Edit Here]",     // Shenzhen
+				locationID: "[Edit Here]",   //ID and appid  from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
+				appid: "[Edit Here]"
 			}
 		},
 		{
@@ -68,9 +66,9 @@ var config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from https://openweathermap.org/city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "[Edit Here]",    // Shenzhen
+				locationID: "[Edit Here]",  //ID and appid from https://openweathermap.org/city
+				appid: "[Edit Here]"
 			}
 		},
 		{
@@ -79,14 +77,22 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "Asia News",
+						url: "http://www.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml"
 					}
 				],
 				showSourceTitle: true,
 				showPublishDate: true
 			}
 		},
+	        {
+			module: 'MMM-WatchDog',
+			config: {
+				interval: 2,
+				timeout: 10
+			}
+		},
+
 	]
 
 };

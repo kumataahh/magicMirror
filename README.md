@@ -62,9 +62,16 @@ rm -rf node_modules/
 npm install
 ```
 
-3. Add config infos in config.js  
+3. Add API config infos
+```
+cp config/config.js.sample config/config.js
 
-`config/config.js`  申请相应网站的api并把key加入config.js
+```
+
+Edit  `config/config.js` 
+
+根据注释的提示，申请相应网站的KEY并加入config.js的[Edit Here]中
+
 
 4. Start the application
 ```
