@@ -63,8 +63,8 @@ npm install
 ```
 
 3. Add config infos in config.js  
-`config/config.js`  申请相应网站的KEY并加入config.js
 
+`config/config.js`  申请相应网站的KEY并加入config.js
 
 4. Start the application
 ```
