@@ -55,9 +55,6 @@ git clone https://github.com/kumataahh/magicMirror
 // Enter the repository
 cd magicMirror
 
-// Delete the original node_modules
-rm -rf node_modules/
-
 // Install the application
 npm install
 ```
