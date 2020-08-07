@@ -2,7 +2,7 @@
 Make a MagicMirror from [![MagicMirror](https://github.com/MichMich/MagicMirror/blob/master/.github/header.png)](https://github.com/MichMich/MagicMirror)
 
 # Finished demo
-![finish_demo](https://github.com/kumataahh/magicMirror/.photo/demo.jpg)
+![finish_demo](pics/demo.png)
 
 # HW List
 
